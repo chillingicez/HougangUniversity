@@ -4,25 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Rule of 3 – Hougang University</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --crimson: #9b1c1c;
-      --crimson-light: #c0392b;
       --gold: #c9a84c;
       --ink: #111111;
       --paper: #faf8f5;
       --cream: #f5f0e8;
       --muted: #6b6460;
-      --yellow-soft: #fdf6dc;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: var(--paper);
       color: var(--ink);
       font-family: 'DM Sans', sans-serif;
-      font-size: 18px;
-      line-height: 1.85;
+      font-size: 19px;
+      line-height: 1.88;
     }
     nav {
       background: var(--ink);
@@ -33,133 +31,142 @@
       padding: 0 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
     .nav-brand {
       color: white;
       text-decoration: none;
       font-family: 'DM Mono', monospace;
       font-size: 13px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
     header {
       background: var(--ink);
-      padding: 80px 40px 60px;
+      padding: 100px 40px 80px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(48px, 8vw, 88px);
       font-weight: 900;
-      line-height: 1.05;
+      line-height: 1.04;
       color: white;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      letter-spacing: -0.015em;
     }
     h1 em { color: var(--gold); font-style: italic; }
+    .subtitle {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      margin: 0 auto;
+    }
     .tag {
       font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 0.12em;
+      font-size: 13px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       background: var(--crimson);
       color: white;
-      padding: 6px 16px;
-      border-radius: 2px;
+      padding: 7px 18px;
+      border-radius: 3px;
       font-weight: 500;
       display: inline-block;
-      margin: 0 0 24px;
+      margin-bottom: 32px;
     }
     main {
-      max-width: 760px;
+      max-width: 740px;
       margin: 0 auto;
-      padding: 60px 40px 100px;
+      padding: 80px 40px 120px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--crimson);
+      margin: 80px 0 28px;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 56px 0 20px;
+      line-height: 1.2;
     }
     .drop-cap::first-letter {
       font-family: 'Playfair Display', serif;
-      font-size: 5.4em;
+      font-size: 6.2em;
       font-weight: 900;
       float: left;
-      line-height: 0.77;
-      margin: 8px 14px 0 -4px;
+      line-height: 0.72;
+      margin: 10px 16px 0 -8px;
       color: var(--crimson);
     }
+    p {
+      margin-bottom: 1.9em;
+    }
+    strong { font-weight: 600; color: var(--ink); }
+    em { color: var(--crimson); font-style: italic; font-weight: 500; }
     .pull-quote {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(22px, 3.5vw, 32px);
+      font-size: clamp(26px, 4vw, 38px);
       font-style: italic;
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.38;
       color: var(--crimson);
-      border-left: 5px solid var(--gold);
-      padding: 8px 0 8px 32px;
-      margin: 48px 0;
+      border-left: 6px solid var(--gold);
+      padding: 12px 0 12px 36px;
+      margin: 64px 0;
+      letter-spacing: -0.005em;
     }
-    .concept-card {
+    .principle {
       background: var(--cream);
-      border-radius: 4px;
-      border-left: 5px solid var(--crimson);
-      padding: 32px;
-      margin: 48px 0;
+      border-left: 6px solid var(--crimson);
+      padding: 40px 36px;
+      margin: 56px 0;
+      font-size: 20px;
+      line-height: 1.7;
+      font-weight: 400;
     }
-    .concept-card h3 {
+    .principle strong {
+      display: block;
+      font-size: 28px;
       font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      margin-bottom: 16px;
       color: var(--crimson);
+      margin-bottom: 20px;
     }
-    .traffic-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin: 48px 0;
+    .conclusion {
+      font-size: 21px;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      margin: 100px 0 80px;
+      line-height: 1.6;
+      padding: 0 20px;
     }
-    .traffic-card {
-      border-radius: 6px;
-      padding: 28px 24px;
-      position: relative;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .traffic-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 5px;
-    }
-    .traffic-card.red::before    { background: var(--crimson); }
-    .traffic-card.yellow::before  { background: var(--gold); }
-    .traffic-card.green::before   { background: #2e7d52; }
-    .tc-head {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .tc-row { font-size: 16px; line-height: 1.6; }
     .back-to-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin: 80px auto 0;
-      padding: 12px 28px;
+      display: block;
+      width: fit-content;
+      margin: 0 auto 60px;
+      padding: 14px 36px;
       font-family: 'DM Mono', monospace;
-      font-size: 14px;
-      letter-spacing: 0.1em;
+      font-size: 15px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: white;
       background: var(--crimson);
       text-decoration: none;
       border-radius: 4px;
-      transition: background 0.2s;
+      transition: background 0.25s;
     }
-    .back-to-main:hover { background: var(--crimson-light); }
+    .back-to-main:hover { background: #b22626; }
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
       color: var(--muted);
       font-size: 14px;
       border-top: 1px solid #e0d8d0;
@@ -175,62 +182,41 @@
   <header>
     <div class="tag">DEPT. OF UNDERSTANDING WOMEN</div>
     <h1>The <em>Rule of 3</em></h1>
-    <p style="font-size: 20px; color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto;">
-      Seminar 3 · Tutorial<br>
-      When the chat stays digital for too long, it's usually not destiny.
-    </p>
+    <p class="subtitle">Seminar 3 · Tutorial<br>A diagnostic principle for the modern age</p>
   </header>
 
   <main>
-    <p class="drop-cap">T</p><p>here comes a moment in every modern courtship where you must apply the oldest filter in the book — dressed up for 2026 as <strong>The Rule of 3</strong>.</p>
+    <p class="drop-cap">I</p><p>n the contemporary theatre of courtship, where digital conversation has become both prelude and — far too often — substitute for genuine intent, a single empirical rule emerges with sobering clarity: <strong>The Rule of 3</strong>.</p>
 
-    <p>If by the end of <strong>three calendar days</strong> of consistent texting you do not have a concrete date on the books (time, place, rough plan), <strong>move along</strong>.</p>
+    <p>If, after <strong>three consecutive calendar days</strong> of sustained textual exchange, no definite appointment has been established — no specified time, no chosen venue, no mutual commitment to meet in the physical world — then the rational course of action is unequivocal: <strong>disengage</strong>.</p>
 
     <div class="pull-quote">
-      “She's not 'busy.' She's not 'figuring things out.' She's just not that into you — and she's enjoying the attention while it lasts.”
+      “She is not occupied. She is not indecisive. She is simply not sufficiently interested — and the keyboard has become her preferred form of amusement.”
     </div>
 
-    <div class="concept-card">
-      <h3>Core Principle</h3>
-      <p>A grown man does not have time to play endless pen-pal with someone who's only bored, lonely, or collecting orbiters. Texting marathons without escalation = entertainment for her, time-sink for you.</p>
-      <p style="margin-top: 24px; font-weight: 500; color: var(--crimson);">
-        Three days. No date secured? Next.
-      </p>
+    <h2>Core Tenet</h2>
+
+    <div class="principle">
+      <strong>Time is the scarcest resource of a man of value.</strong><br><br>
+      Extended textual correspondence without escalation to an in-person encounter constitutes an asymmetrical exchange: your attention and mental bandwidth offered freely, her entertainment secured at negligible cost. This pattern — frequent replies yet perpetual deferral of plans — is not ambiguity; it is <em>disinterest masked as engagement</em>. Boredom, validation-seeking, or mere habit may sustain the dialogue, but none of these motives merit prolonged investment from a grown adult.
     </div>
 
-    <h2 style="font-family: 'Playfair Display', serif; font-size: 34px; margin: 80px 0 32px; text-align: center;">
-      Diagnostic Traffic Lights
-    </h2>
+    <h2>Application</h2>
 
-    <div class="traffic-grid">
-      <div class="traffic-card green">
-        <div class="tc-head">Green Light – Proceed</div>
-        <div class="tc-row"><strong>She suggests times/locations</strong> herself or locks in your proposal quickly.</div>
-        <div class="tc-row"><strong>She asks questions</strong> about you beyond surface level.</div>
-        <div class="tc-row"><strong>Energy is reciprocal</strong> — she matches or exceeds your effort.</div>
-      </div>
+    <p>After the third day, absent concrete progress toward a date, further messages serve only to prolong an illusion. Cease initiation. Should she re-engage with genuine intent (a specific counter-proposal rather than vague flirtation), the interaction may be reconsidered. Absent such initiative, the matter is resolved by default.</p>
 
-      <div class="traffic-card yellow">
-        <div class="tc-head">Yellow Light – Caution</div>
-        <div class="tc-row">Replies are consistent but short/vague (“haha yeah”, “maybe”, “idk”).</div>
-        <div class="tc-row">She keeps the chat alive but dodges date logistics.</div>
-        <div class="tc-row">You're the one always restarting the conversation.</div>
-        <div class="tc-row"><em>Give 24 more hours max — then force the issue or walk.</em></div>
-      </div>
+    <p>The principle demands neither anger nor elaborate farewell. A simple withdrawal of effort suffices. Your calendar, your purpose, and your dignity remain intact.</p>
 
-      <div class="traffic-card red">
-        <div class="tc-head">Red Light – Eject</div>
-        <div class="tc-row"><strong>Three full days</strong> pass with texting but zero date set.</div>
-        <div class="tc-row">Dry responses, ghosting streaks, or “I'm just not good at texting” excuses.</div>
-        <div class="tc-row">You're carrying 80–100% of the conversation weight.</div>
-        <div class="tc-row"><strong>She's bored-texting</strong>. Your time is finite. Protect it.</div>
-      </div>
-    </div>
+    <h2>Corollary Observations</h2>
 
-    <p style="font-style: italic; color: var(--muted); text-align: center; margin: 64px 0;">
+    <p>• Consistent but shallow replies without logistical momentum are the hallmark of <strong>recreational texting</strong>.<br>
+    • Phrases such as “I’m bad at texting” or “I’ve been so busy” function as polite deflections far more often than literal truths.<br>
+    • Reciprocity in effort is non-negotiable; one-sided propulsion of conversation reveals the true distribution of interest.</p>
+
+    <div class="conclusion">
       Product of a female-dominated household. Reluctant field researcher.<br>
-      We believe in co-existence — and in not wasting your prime years on low-interest chats.
-    </p>
+      We affirm co-existence, mutual respect, and — above all — the refusal to squander finite years on low-probability digital dalliances.
+    </div>
 
     <a href="hougang-university.html" class="back-to-main">← Return to Main Lecture Hall</a>
   </main>
