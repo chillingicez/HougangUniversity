@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Rule of 3 – Hougang University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --crimson: #9b1c1c;
+      --crimson-light: #c0392b;
+      --gold: #c9a84c;
+      --ink: #111111;
+      --paper: #faf8f5;
+      --cream: #f5f0e8;
+      --muted: #6b6460;
+      --yellow-soft: #fdf6dc;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+    nav {
+      background: var(--ink);
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      color: white;
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    header {
+      background: var(--ink);
+      padding: 80px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 900;
+      line-height: 1.05;
+      color: white;
+      margin-bottom: 16px;
+    }
+    h1 em { color: var(--gold); font-style: italic; }
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--crimson);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 2px;
+      font-weight: 500;
+      display: inline-block;
+      margin: 0 0 24px;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+    .drop-cap::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 5.4em;
+      font-weight: 900;
+      float: left;
+      line-height: 0.77;
+      margin: 8px 14px 0 -4px;
+      color: var(--crimson);
+    }
+    .pull-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--crimson);
+      border-left: 5px solid var(--gold);
+      padding: 8px 0 8px 32px;
+      margin: 48px 0;
+    }
+    .concept-card {
+      background: var(--cream);
+      border-radius: 4px;
+      border-left: 5px solid var(--crimson);
+      padding: 32px;
+      margin: 48px 0;
+    }
+    .concept-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      margin-bottom: 16px;
+      color: var(--crimson);
+    }
+    .traffic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+    .traffic-card {
+      border-radius: 6px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .traffic-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+    }
+    .traffic-card.red::before    { background: var(--crimson); }
+    .traffic-card.yellow::before  { background: var(--gold); }
+    .traffic-card.green::before   { background: #2e7d52; }
+    .tc-head {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .tc-row { font-size: 16px; line-height: 1.6; }
+    .back-to-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 80px auto 0;
+      padding: 12px 28px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: white;
+      background: var(--crimson);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .back-to-main:hover { background: var(--crimson-light); }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid #e0d8d0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="hougang-university.html" class="nav-brand">HOUGANG UNIVERSITY</a>
+  </nav>
+
+  <header>
+    <div class="tag">DEPT. OF UNDERSTANDING WOMEN</div>
+    <h1>The <em>Rule of 3</em></h1>
+    <p style="font-size: 20px; color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto;">
+      Seminar 3 · Tutorial<br>
+      When the chat stays digital for too long, it's usually not destiny.
+    </p>
+  </header>
+
+  <main>
+    <p class="drop-cap">T</p><p>here comes a moment in every modern courtship where you must apply the oldest filter in the book — dressed up for 2026 as <strong>The Rule of 3</strong>.</p>
+
+    <p>If by the end of <strong>three calendar days</strong> of consistent texting you do not have a concrete date on the books (time, place, rough plan), <strong>move along</strong>.</p>
+
+    <div class="pull-quote">
+      “She's not 'busy.' She's not 'figuring things out.' She's just not that into you — and she's enjoying the attention while it lasts.”
+    </div>
+
+    <div class="concept-card">
+      <h3>Core Principle</h3>
+      <p>A grown man does not have time to play endless pen-pal with someone who's only bored, lonely, or collecting orbiters. Texting marathons without escalation = entertainment for her, time-sink for you.</p>
+      <p style="margin-top: 24px; font-weight: 500; color: var(--crimson);">
+        Three days. No date secured? Next.
+      </p>
+    </div>
+
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 34px; margin: 80px 0 32px; text-align: center;">
+      Diagnostic Traffic Lights
+    </h2>
+
+    <div class="traffic-grid">
+      <div class="traffic-card green">
+        <div class="tc-head">Green Light – Proceed</div>
+        <div class="tc-row"><strong>She suggests times/locations</strong> herself or locks in your proposal quickly.</div>
+        <div class="tc-row"><strong>She asks questions</strong> about you beyond surface level.</div>
+        <div class="tc-row"><strong>Energy is reciprocal</strong> — she matches or exceeds your effort.</div>
+      </div>
+
+      <div class="traffic-card yellow">
+        <div class="tc-head">Yellow Light – Caution</div>
+        <div class="tc-row">Replies are consistent but short/vague (“haha yeah”, “maybe”, “idk”).</div>
+        <div class="tc-row">She keeps the chat alive but dodges date logistics.</div>
+        <div class="tc-row">You're the one always restarting the conversation.</div>
+        <div class="tc-row"><em>Give 24 more hours max — then force the issue or walk.</em></div>
+      </div>
+
+      <div class="traffic-card red">
+        <div class="tc-head">Red Light – Eject</div>
+        <div class="tc-row"><strong>Three full days</strong> pass with texting but zero date set.</div>
+        <div class="tc-row">Dry responses, ghosting streaks, or “I'm just not good at texting” excuses.</div>
+        <div class="tc-row">You're carrying 80–100% of the conversation weight.</div>
+        <div class="tc-row"><strong>She's bored-texting</strong>. Your time is finite. Protect it.</div>
+      </div>
+    </div>
+
+    <p style="font-style: italic; color: var(--muted); text-align: center; margin: 64px 0;">
+      Product of a female-dominated household. Reluctant field researcher.<br>
+      We believe in co-existence — and in not wasting your prime years on low-interest chats.
+    </p>
+
+    <a href="hougang-university.html" class="back-to-main">← Return to Main Lecture Hall</a>
+  </main>
+
+  <footer>
+    © 2026 @seangeraaald · Hougang University · All Rights Reserved
+  </footer>
+
+</body>
+</html>
